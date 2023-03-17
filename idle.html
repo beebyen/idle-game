@@ -1,66 +1,73 @@
-<html>
-  <head>
-    <title> Code Clicker </title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body>
-    <div class="pets__rate">
-        <span class="pets__text">Pets Per Second</span>
-        <span class="pets__num"> 0 </span>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitty Clicker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <div class="pets__rate">
+    <span class="pets__text">Pets Per Second</span>
+    <span class="pets__num" id="pets__num"> 0 </span>
+  </div>
+
+  <div class="clicker">
+    <div class="clicker__button-area" id="clicker__button">
+      <div>pet me!</div>
+      <button class="clicker__button"> </button>
+      <div id="count">0</div>
     </div>
+  </div>
+  <a href="https://www.flaticon.com/free-icons/cat" class="cat_icon">Cat icon by Freepik - Flaticon</a>
 
-    <div class="clicker">
-      <div class="clicker__button-area">
-        <div>pet me!</div>
-        <button class="clicker__button"> </button>
-        <div>0</div>
-      </div>
-    </div>
-
-    <div class="store">
-        <div class="buyable">        
-            <div class="buyable__text">
-            <div class="buyable__title">
-              <div class="buyable__title-text"> Another Hand </div>    
-              </div>
-              <div class="buyable__description">
-                  <span class="buyable_description">Don't think too hard about it.</span>
-                  <span class="buyable__title-price"> 10 Pets </span>
-              </div>
-            <div class="buyable__effect"> +1 Pet Per Click </div>
-          </div>
-          <button class="buyable__button"> Buy </button>
-        </div>
-
-      <div class="buyable">        
-          <div class="buyable__text">
-          <div class="buyable__title">
-            <div class="buyable__title-text"> A Friend </div>    
-            </div>
-            <div class="buyable__description">
-                <span class="buyable_description">She will pet your cat, too.</span>
-                <span class="buyable__title-price"> 100 Pets </span>
-            </div>
-          <div class="buyable__effect"> +1 Pet Per Second </div>
-        </div>
-        <button class="buyable__button"> Buy </button>
-      </div>
-
-      <div class="buyable">        
-        <div class="buyable__text">
+  <div class="store">
+    <div class="buyable">
+      <div class="buyable__text">
         <div class="buyable__title">
-          <div class="buyable__title-text"> Auto-Petter </div>    
-          </div>
-          <div class="buyable__description">
-              <span class="buyable_description">Never gets tired!</span>
-              <span class="buyable__title-price"> 1000 Pets </span>
-          </div>
+          <div class="buyable__title-text"> Another Hand </div>
+        </div>
+        <div class="buyable__description">
+          <span class="buyable_description">Don't think too hard about it.</span>
+          <span class="buyable__title-price"> 10 Pets </span>
+        </div>
+        <div class="buyable__effect"> +1 Pet Per Click </div>
+      </div>
+      <button class="buyable__button" type="button"> Buy </button>
+    </div>
+
+    <div class="buyable">
+      <div class="buyable__text">
+        <div class="buyable__title">
+          <div class="buyable__title-text"> A Friend </div>
+        </div>
+        <div class="buyable__description">
+          <span class="buyable_description">She will pet your cat, too.</span>
+          <span class="buyable__title-price"> 100 Pets </span>
+        </div>
+        <div class="buyable__effect"> +1 Pet Per Second </div>
+      </div>
+      <button class="buyable__button"> Buy </button>
+    </div>
+
+    <div class="buyable">
+      <div class="buyable__text">
+        <div class="buyable__title">
+          <div class="buyable__title-text"> Auto-Petter </div>
+        </div>
+        <div class="buyable__description">
+          <span class="buyable_description">Never gets tired!</span>
+          <span class="buyable__title-price"> 1000 Pets </span>
+        </div>
         <div class="buyable__effect"> +1 Pet Per Click </div>
       </div>
       <button class="buyable__button"> Buy </button>
     </div>
-    
-    </div>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,106 +1,116 @@
 html {
-    height: 100%;
-  }
-  
-  body {
-    margin: 0 auto;
-    height: 700px;
-    width: 700px;
-    background: #c9f1fd;
-    font-family: monospace;
-  }
-  
-  .clicker {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30%;
-  }
-  
-  .store {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 70%;
-    margin: 30px;
-    padding: 10px 20px 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-  }
+  height: 100%;
+}
 
-  .pets__rate {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-  }
-  
-  .clicker__button-area {
-    font-size: 20px;
-    text-align: center;
-    background: #ffe2d8;
-    border-radius: 10px;
-    height: 150px;
-    width: 200px;
-  }
-  
-  .clicker__button {
-    background-image: url("https://www.flaticon.com/svg/static/icons/svg/12/12638.svg");
-    height: 100px;
-    width: 100px;
-    background-color: #ffe2d8;
-    border: none;
-    outline: none;
-  }
-  
-  .buyable {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin: 20px 0px 0px;
-    border: 2px solid #ffe2d8;
-    background-color: ffe2d8;
-    border-radius: 10px;
-    width: 90%;
-    height: 80%;
-  }
-  
-  .buyable__text {
-    flex-grow: 1;
-    margin: 0 20px;
-  }
-  
-  .buyable__title {
-    display: flex;
-    margin-bottom: 5px;
-  }
+body {
+  margin: 0 auto;
+  height: 700px;
+  width: 700px;
+  background: #c9f1fd;
+  font-family: monospace;
+}
 
-  .buyable__description {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .buyable__title-text {
-    font-weight: bold;
-  }
-  
-  .buyable__effect {
-    font-size: 12px;
-  }
-  
-  .buyable__button {
-    align-self: center;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    color: #000000;
-    font-size: 15px;
-    font-family: monospace;
-    height: 30px;
-    width: 80px;
-  }
+.clicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
+
+.cat_icon {
+  margin-top: -25px;
+  font-size: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+  margin: 30px;
+  padding: 10px 20px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.pets__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.clicker__button-area {
+  font-size: 20px;
+  text-align: center;
+  background: #ffe2d8;
+  border-radius: 10px;
+  height: 150px;
+  width: 200px;
+  border: 2px solid #ffffff;
+}
+
+.clicker__button {
+  background-image: url("./assets/cat.png");
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  background-color: #ffe2d8;
+  border: none;
+  outline: none;
+}
+
+.buyable {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0px 0px;
+  border: 2px solid #ffe2d8;
+  background-color: #ffe2d8;
+  border-radius: 10px;
+  width: 90%;
+  height: 80%;
+}
+
+.buyable__text {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.buyable__title {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.buyable__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buyable__title-text {
+  font-weight: bold;
+}
+
+.buyable__effect {
+  font-size: 12px;
+}
+
+.buyable__button {
+  align-self: center;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 15px;
+  font-family: monospace;
+  height: 30px;
+  width: 80px;
+}
