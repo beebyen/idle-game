@@ -1,0 +1,80 @@
+<template id="buyableTemplate">
+  <style>
+    .buyable {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin: 20px 0px 0px;
+      border: 2px solid #ffe2d8;
+      background-color: #ffe2d8;
+      border-radius: 10px;
+      width: 90%;
+      height: 80%;
+    }
+
+    .buyable__text {
+      flex-grow: 1;
+      margin: 0 20px;
+    }
+
+    .buyable__title {
+      display: flex;
+      margin-bottom: 5px;
+    }
+
+    .buyable__description {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .buyable__title-text {
+      font-weight: bold;
+    }
+
+    .buyable__effect {
+      font-size: 12px;
+    }
+
+    .buyable__button {
+      align-self: center;
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      color: #000000;
+      font-size: 15px;
+      font-family: monospace;
+      height: 30px;
+      width: 80px;
+      cursor: pointer;
+    }
+
+    .buyable__button:hover {
+      background-color: #dfc5bd;
+    }
+
+    .buyable__button:active {
+      background-color: #c2aca6;
+    }
+  </style>
+  <div class="buyable">
+    <div class="buyable__text">
+      <div class="buyable__title">
+        <div class="buyable__title-text">
+          <slot name="shop-item-name"> Shop Item Name </slot>
+        </div>
+      </div>
+      <div class="buyable__description">
+        <span class="buyable_description">
+          <slot name="shop-item-description"> Shop Item Description </slot>
+        </span>
+        <span class="buyable__title-price">
+          <slot name="shop-item-price"> Shop Item Price </slot>
+        </span>
+      </div>
+      <div class="buyable__effect">
+        <slot name="shop-item-effect"></slot>
+      </div>
+    </div>
+    <button class="buyable__button"> Buy </button>
+  </div>
+</template>

@@ -1,3 +1,10 @@
+class ShopItem {
+  constructor(cost, increase) {
+    this.cost = cost;
+    this.increase = increase;
+  }
+}
+
 /**
  * Set cookie in the browser
  * @param {string} cname: cookie name 
@@ -37,12 +44,11 @@ function getCookie(cname) {
  * Retrieves count from cookie
  */
 function getCount() {
-  let count = getCookie("count");
-  if (count !== "") {
-    return Number(count);
-  } else {
-    return 0;
+  let count = 0;
+  if (localStorage.getItem("count")) {
+    count = Number(localStorage.getItem("count"));
   }
+  return count;
 }
 
 /**
@@ -60,24 +66,39 @@ function getPetsPerSecond() {
 function addPetsPerSecond(count, petsPerSecond) {
   setInterval(() => {
     document.getElementById("count").innerHTML = count + petsPerSecond;
-    setCookie("count", count + petsPerSecond, 120);
+    localStorage.getItem("count", count + petsPerSecond)
   }, 1000);
 }
 
 let clickerButton = document.getElementById('clicker__button');
+let buyButton = document.getElementById('buy_button_1');
 let count = getCount();
-let petsPerSecond = 5;
+let petsPerClick = 1;
+let petsPerSecond = 0;
+let shopItemCost1 = 10;
 
+document.getElementById('item_1_cost').innerHTML = shopItemCost1;
 document.getElementById("count").innerHTML = count;
 document.getElementById("pets__num").innerHTML = petsPerSecond;
 
 setInterval(() => {
   count = count + petsPerSecond;
   document.getElementById("count").innerHTML = count;
-  setCookie("count", count, 120);
+  localStorage.setItem("count", count);
 }, 1000);
 
 clickerButton.onclick = function () {
-  document.getElementById("count").innerHTML = ++count
-  setCookie("count", count, 120);
+  count = count + petsPerClick;
+  document.getElementById("count").innerHTML = count;
+  localStorage.setItem("count", count);
+}
+
+buyButton.onclick = function () {
+  if (count - shopItemCost1 >= 0) {
+    count = count - shopItemCost1;
+    petsPerClick = petsPerClick + 1;
+    document.getElementById("count").innerHTML = count;
+    localStorage.setItem("count", count);
+    shopItemCost1 = shopItemCost1 + 2;
+  }
 }

@@ -59,7 +59,7 @@ body {
 }
 
 .clicker__button {
-  background-image: url("./assets/cat.png");
+  background-image: url("../assets/cat.png");
   background-size: cover;
   height: 100px;
   width: 100px;
@@ -113,4 +113,13 @@ body {
   font-family: monospace;
   height: 30px;
   width: 80px;
+  cursor: pointer;
+}
+
+.buyable__button:hover {
+  background-color: #dfc5bd;
+}
+
+.buyable__button:active {
+  background-color: #c2aca6;
 }
