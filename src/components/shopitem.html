@@ -1,4 +1,4 @@
-<template id="buyableTemplate">
+<template id="shop-item">
   <style>
     .buyable {
       display: flex;
@@ -72,7 +72,7 @@
         </span>
       </div>
       <div class="buyable__effect">
-        <slot name="shop-item-effect"></slot>
+        <slot name="shop-item-effect"> Shop Item Effect </slot>
       </div>
     </div>
     <button class="buyable__button"> Buy </button>

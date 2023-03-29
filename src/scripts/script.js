@@ -5,6 +5,16 @@ class ShopItem {
   }
 }
 
+customElements.define("shop-item", class extends HTMLElement {
+  constructor() {
+    super();
+    let template = document.getElementById("shop-item");
+    let templateContent = template.content;
+
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(templateContent.cloneNode(true));
+  }
+})
 /**
  * Set cookie in the browser
  * @param {string} cname: cookie name 
